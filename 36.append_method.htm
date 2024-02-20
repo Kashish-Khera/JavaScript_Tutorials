@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM append and insertBefore</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: #ff0000;
+        }
+
+        #test {
+            background: #ffff00;
+            width: 800px;
+            height: 200px;
+            padding: 10px 10px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> DOM Append Methods</h1>
+    <div id="test">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam eos vel consequatur. Delectus
+            voluptas dolorem id exercitationem, ad ipsam consectetur hic ullam provident! Adipisci exercitationem ipsam
+            rerum sunt doloremque magni soluta, delectus maiores, sapiente quasi labore praesentium accusamus earum cum
+            nam saepe qui? Accusamus provident quo perferendis sint sed.</p>
+        <h3>Hola!!</h3>
+    </div>
+    <script>
+
+        // appendChild--- append(attach tag with the text)
+        // append in the last 
+
+
+        var newelem = document.createElement("h1");
+        console.log(newelem);
+
+        var newelem2 = document.createTextNode("appending Methodss");
+        console.log(newelem2);
+
+        // text with tag
+        newelem.appendChild(newelem2);
+        console.log(newelem);
+
+        var newelem3 = document.createComment("This is a Comment");
+        console.log(newelem3);
+
+        // addeded the new tag with the existing one
+        document.getElementById("test").appendChild(newelem);
+        document.getElementById("test").appendChild(newelem3);
+
+
+
+        // insertBefore --append at any position
+
+
+        var target = document.getElementById("test");
+        // target ke 1st children se pehle append 
+        // sytax : insertBefore(newNode, referenceNode)-- reference node :The node before which newNode is inserted. If this is null, then newNode is inserted at the end of node's child nodes.
+        target.insertBefore(newelem, target.childNodes[0])
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

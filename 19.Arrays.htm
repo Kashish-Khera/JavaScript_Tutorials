@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+ document.write("<h1> Arrays </h1>");
+ document.write("<p>arrays store ssame datatype values </p>");
+
+
+//  Syntax:  var arrayname = [value1, value2, value3, value4];
+
+
+var a = [10,20,30];
+ var b = ["RED", "YELLOW", "GREEN", "PURPLE"];
+
+ document.write(a +"<br>");
+ document.write(b +"<br>");
+ document.write(b[0] +"<br>");
+ document.write(b[1] +"<br>");
+ document.write(b[2] +"<br>");
+
+ var c = [];
+c[1] = "one";
+c[2] = "two";
+
+document.write(c + "<br>");
+
+const cars = new Array("Saab", "Volvo", "BMW");
+
+// The two examples above do exactly the same.There is no need to use new Array()
+
+const carss = ["Saab", "Volvo", "BMW"];
+carss[0] = "Opel";
+document.write(carss +"<br>");
+
+
+
+var d = [ "one", 100, true , null];
+ document.write(d + "<br>");
+
+document.write("<br>");
+ document.write("iterating array elements <br>");
+ for(var i = 0; i<= d.length ; i++)
+ {
+    document.write(d[i]  + "  ");
+ }
+
+ document.write("<h3> Modify array elements </h3>");
+
+ var a = [1,2,3,4,5];
+ document.write(a + "<br>");
+  a[2]= "QWERTY";
+   document.write(a + "<br>");
+   
+   
+   document.write("<h3> Delete array elements </h3>");
+   delete a[1];
+   document.write(a + "<br>");
+   a[1] = 123456
+   document.write(a + "<br>");
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

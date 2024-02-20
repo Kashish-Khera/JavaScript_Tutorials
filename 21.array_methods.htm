@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+document.write("<h1> Array Methods </h1>");
+
+// 1. Sort()
+
+var a = ["Sun", "Moon", "Earth", "Water", "Air"];
+document.write(a + "<br>");
+
+a.sort();
+document.write("<br><b>Sorted array :  </b> <br>");
+document.write(a + "<br>");
+
+// 2. Reverse() -- last element become 1st of the array. (No increasing or decreasing order thing)
+
+
+a.reverse();
+document.write("<br><b>Reverse array :  </b> <br>");
+document.write(a + "<br>");
+
+
+var b = [1,4,6,9,10];
+document.write(b + "<br>");
+b.reverse();
+document.write("<br><b>Reverse array-2 :  </b> <br>");
+document.write(b + "<br>");
+
+
+// 3. Push()  -- add element in the lastv.
+
+document.write("<br>b is : <br>");
+document.write(b + "<br>");
+b.push("QWERTY");
+document.write("<br><b>Push array :  </b> <br>");
+document.write(b + "<br>");
+
+
+// 4. Pop() -- remove/delete the last array element
+
+document.write("<br>b is : <br>");
+document.write(b + "<br>");
+b.pop(); b.pop();
+document.write("<br><b>Pop array :  </b> <br>");
+document.write(b + "<br>");
+
+document.write(b + "<br>");
+ b.pop();
+document.write("<br><b>pop array -2:  </b> <br>");
+document.write(b + "<br>");
+
+
+// 5. Shift() -- remove/delete first element
+
+document.write(b + "<br>");
+b.shift();
+document.write("<br><b>Shift array :  </b> <br>");
+document.write(b + "<br>");
+
+// 6. Unshift() -- add eleemnt in the starting of array
+
+document.write(b + "<br>");
+b.unshift("okayyyyy");
+document.write("<br><b>UnShift array :  </b> <br>");
+document.write(b + "<br>");
+
+
+// 7. concat() -- merge two arrays
+
+var c = [1,2,3,4,5,6,7,8];
+var d = c.concat("Red", "Yellow", "Purple", "orange");
+document.write("<br><b>Concat array :  </b> <br>");
+document.write(d + "<br>");
+
+
+var e =[true , false, null];
+var f = e.concat(d);
+document.write("<br><b>Concat array-2 :  </b> <br>");
+document.write(f + "<br>");
+
+
+// 8. join() -- convert array elements to string.
+
+var g = ["Red","Yellow", "Purple", "orange"];
+var h = g.join();
+document.write("<br><b> Join array :  </b> <br>");
+document.write(h + "<br>");
+
+var h = g.join("-☠");
+document.write("<br><b> Join array-2 :  </b> <br>");
+document.write(h + "<br>");
+
+// 9.Slice() -- create new array with some elemnts from the existing array. 
+//  syntax : slice(starting index, ending index);
+
+// will not print endindex value
+
+var a = ["Red","Yellow", "Purple", "orange", "Green", "Pink", "Teal"];
+
+document.write("<br><b> Slice array :  </b> <br>");
+
+var b = a.slice(1,4);
+document.write(b + "<br>");
+
+var c = a.slice(1);
+document.write(c + "<br>");
+
+
+var d = a.slice(-4);  //teal = -1 , pink=-2 ...
+document.write(d + "<br>");
+
+// 10. Splice() -- add mulitple elements in b/w the array / delete existing value  
+
+// syntax : splice(index, howmanydelete (0/1) , "New value" )
+// howmanydelete = 0 ->  shoft the elements and add new value
+// howmanydelete = 1 ->  delete the value and add elements
+
+document.write("<br><b> Splice array :  </b> <br>");
+a.splice(2,0, 10000);
+document.write(a + "<br>");
+
+a.splice(3,1,"OKK");  //3rd elemeyt is deleted and replaced with the new value
+document.write(a + "<br>");
+
+
+
+// 11. isArray() Methods
+
+document.write("<br><b> IsArray Method :  </b> <br>");
+
+var a = ["1", 2, 3,4 ,5 , "1" , "1", 4,7,8,9];
+ var b = true;
+ var c = {1:"qwerty", 2 : "ppp"};
+
+ document.write(Array.isArray(a)  + "<br>");
+ document.write(Array.isArray(b)  + "<br>");
+ document.write(Array.isArray(c)  + "<br>");
+
+
+//  12. indexOf() :  if element exist, return index  (return first occurnace)
+// sytax : indexOf(searchitem , start index)
+// if item not found return -1
+
+document.write("<br><b> indexOf Method :  </b> <br>");
+var p = a.indexOf("1");
+document.write(p + "<br>");
+
+// start searching from 3rd index
+var q = a.indexOf("1",3);
+document.write(q + "<br>");
+
+var x = a.indexOf("qwerty");
+document.write(x + "<br>");
+
+
+// 13: lastindexOf():  works sameas indexof . but here it starts from the end.
+
+
+document.write("<br><b> LastindexOf Method :  </b> <br>");
+var p = a.lastIndexOf("1");
+document.write(p + "<br>");
+
+// start searching from 3rd index
+var q = a.lastIndexOf("1",3);
+document.write(q + "<br>");
+
+var x = a.lastIndexOf("qwerty");
+document.write(x + "<br>");
+
+
+
+// 14. includes() : search the value exist in the array or not
+// syntax : includes("search item") --return true/false
+// case sensitive
+
+document.write("<br><b> includes Method :  </b> <br>");
+var p = a.includes("1");
+document.write(p + "<br>");
+
+// start searching from 3rd index
+var q = a.includes(6);
+document.write(q + "<br>");
+
+var x = a.includes("qwerty");
+document.write(x + "<br>");
+
+
+
+// 15. some() : The some() method checks if any array elements pass a test (provided as a callback function)
+// return true/false .
+// syntax :array.some(function(value, index, arr), this)
+// function	Required.
+// A function to run for each array element.
+// Function parameters:
+// value	Required.
+// The value of the current element.
+// index	Optional.
+// The index of the current element.
+// arr	Optional.
+// The array the current element belongs to.
+// this	Optional. Default undefined.
+// A value passed to the function to be used as its "this" value.
+
+document.write("<br><b> Some() Method :  </b> <br>");
+const numbers = [4, 12, 16, 20];
+
+function checkValue(x) {
+  return x >=18 ;
+}
+
+
+var b = numbers.some(checkValue);
+document.write(b);
+
+// 16: every() :
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

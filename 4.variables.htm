@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        document.write("THREE TYPES OF VARIABLES : <b> VAR , LET AND CONST </b>" , "<br>");
+        document.write("<br> Variables are Case sensitive i. x and X are two different variables")
+
+        document.write("<h1>var </h1>")
+        var x = "qwerty";
+        var y = 'one';
+
+
+        document.write(x , "<br>");
+        document.write(y , "<br>");
+
+        x = 1000;
+         document.write(" x value overwrite " , x , "<br>");
+        
+// /latest value will be stored in the variable.
+         var one , two ;
+         document.write(one,"&nbsp;" ,two, "<br>");
+         one = 100;
+         two = "ok"
+
+         document.write(one , "&nbsp;" , two , "<br>");
+
+
+         document.write("<h1>let</h1>");
+         let q = "one";
+         var p = 100;
+
+         document.write( "q : " ,q , "&nbsp; p : ", p);
+         document.write("<br> redefining the variables") ;
+        //  let q = "100";
+        // obove line gives error
+        q = "100"
+         var p = "ok"
+         document.write("<br> q : " ,q , "&nbsp; p : ", p);
+
+          document.write("<br>diff b/w let and var is we can redefine the same variable while using var. but with let ,we cannot redefine it <br> although we can overwrite both the variables - let and var")
+          document.write("<h1>const</h1>");
+
+          const a1 = 100;
+        //   const a1 = "ok";
+
+        // obove line gives error as const is used and with const
+        //  , we cannot redefine/declare again the same variable.
+        //  we cannot reassign/ overwrite the existing value if const is used.
+       
+        // a1 = "qwerty";
+        document.write("a1 : ", a1);
+
+
+
+        var qwerty = 100 ; 
+        document.write("<br>qwertyy" ,qwerty , "<br>");
+        qwerty = 200 
+        document.write(qwerty);
+        var qwerty = 300 
+        document.write("<br>qwertyy" ,qwerty , "<br>");
+
+    </script>
+    
+</body>
+</html>

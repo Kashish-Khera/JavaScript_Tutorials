@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+    <title>DOM Navigation</title>
+</head>
+<style>
+    #outer{
+        width: 550px;
+        height: 300px;
+        padding:10px 10px;
+        margin: 0 auto;
+        background: lightsalmon;
+    }
+
+    #inner{
+       width: 500px;
+        height: 200px;
+        padding:10px 10px;
+        margin:0 auto ;
+        background: mediumorchid;
+    }
+
+    #inner div{
+        display: inline-block;
+        background: #fff;
+        width: 95px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+</style>
+<body>
+    <div id="outer">
+        <h2>Outer</h2>
+        <div id="inner">
+            <h2>Inner</h2>
+            <div>A</div>
+            <div>B</div>
+            <div id="child-c">C</div>
+            <div>D</div>
+            <div>E</div>
+        </div>
+    </div>
+    <script>
+
+
+// children
+
+  var a = document.getElementById("outer").children;
+  console.log(a);
+  var b = document.getElementById("inner").children;
+  console.log("inner : " , b);
+  var c = document.getElementById("inner").children[3];
+  console.log("inner 4th child: " , c);
+  document.getElementById("inner").children[2].style.background = "yellow";
+  document.getElementById("inner").children[2].style.border = "3px dotted black";
+  var d = document.getElementById("inner").children[2].innerHTML ;
+  console.log("inner html : " , d);
+
+
+//   childNodes
+
+// children return only html nodes while childnodes return textnodes also (count space as text)
+var e = document.getElementById("inner").childNodes;
+  console.log("childrennode : " , e);
+
+  var f = document.getElementById("inner").childNodes[3];
+  console.log("specific childrennode : " , f);
+
+  var g = document.getElementById("inner").childNodes[2];
+  console.log("specific childrennode : " , g);
+
+ document.getElementById("inner").childNodes[9].style.background = "cyan";
+ 
+
+// Firstchild
+
+// return first element -- can be text , tag , comment 
+var h = document.getElementById("inner").firstChild;
+  console.log("firstchild : " , h);
+
+
+//   first Eleemnt child -- return first tag 
+  var i = document.getElementById("inner").firstElementChild;
+  console.log("firstElement child : " , i);
+
+  var i = document.getElementById("inner").firstElementChild.innerHTML;
+  console.log("firstElement child : " , i);
+
+
+//   Lastchild
+var i = document.getElementById("inner").lastChild;
+  console.log("last  child : " , i);
+
+  var i = document.getElementById("inner").lastChild.innerHTML;
+  console.log("last  child : " , i);
+
+// Lastelemnt child
+
+var i = document.getElementById("inner").lastElementChild;
+  console.log("Last Eleemnt Child : " , i);
+
+  var i = document.getElementById("inner").lastElementChild.innerHTML;
+  console.log("Last Eleemnt Child : " , i);
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

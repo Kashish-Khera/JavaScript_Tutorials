@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        document.write("<h1>Loops</h1>");
+        document.write(" <b>1. While Loop </b><br>");
+
+
+        var a = 1;
+document.write("<ul>");
+        while (a <= 10) {
+            document.write("<li> a is ", a, "</li><br>");
+            a++;
+        }
+        document.write("</ul>");
+
+        // var b = 10 ;
+        //  while( b >= 1)
+        //  {
+        //     document.write("b is ", b, "<br>");
+        //     b--;
+        //  }
+
+        document.write(" <b>2. Do - While Loop </b><br>");
+
+        var c = 1;
+
+
+        //  while -- It might occur statement(s) is executed zero times, 
+        // If condition is false.dowhile ---	At least once the statement(s) is executed.
+
+        do {
+            document.write("c is "  + c + "<br>");
+            c++;
+        } while ( c >= 10);
+
+        // cond. is false but statement is executed for 1 time only.
+
+        document.write(" <br><b>3. For Loop </b><br>");
+
+        for(var d = 1; d <=10 ; d++)
+        {
+            document.write("d is "  + d + "<br>");
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

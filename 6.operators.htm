@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        document.write("<h1>Operators in JS</h1>");
+
+        document.write("<b>1. Arithmatic Operators</b><br><br>");
+        document.write(" + :  Addition<br>");
+        document.write(" - :  Subtraction<br>");
+        document.write(" * :  Multiplication<br>");
+        document.write(" / :  Division<br>");
+        document.write(" % :  Modulus(Remainder)<br>");
+        document.write(" ++:  Increment<br>");
+        document.write(" --:  Decrement<br>");
+        document.write(" ** :  Exponential<br>");
+
+// NOTE : ++a increments a and returns that value, while a++ returns a's value and then increments a 
+
+/* 
+a++ is a postfix increment operation, where first assignment is done then increment happens
+++a is a prefix increment operation, where first increment is done then the assignment happens
+Eg
+a=6
+
+b = a++ // here b will have 6 and a will then become 7
+
+a=6
+
+b = ++a // here b and a both will have
+  */
+
+
+
+
+
+        var a = 10;
+         var b = 20;
+
+         var c = 2 ;
+         var d = 3;
+         var e = c ** d;  // 2 *2 * 2
+
+         document.write ( "<br>a : " , a ,"&nbsp; b : ", b , "<br>");
+         document.write ("a + b  :  ", a +  b, "<br>");
+         document.write ("a - b  :  ", a -  b, "<br>");
+         document.write ("a / b  :  ", a /  b, "<br>");
+         document.write ("a * b  :  ", a *  b, "<br>");
+         document.write ("a % b  :  ", a %  b, "<br>");
+         document.write ("a ++ :  ", a++, "<br>");
+         document.write ("++a :  ", ++a, "<br>");
+         document.write ("b-- :  ", b--, "<br>");
+         document.write ("--b :  ", --b, "<br>");
+         document.write ("e :  ", e, "<br><br>");
+        
+         document.write("<b>2. Assignment Operators</b><br><br>");
+        document.write(" = :  Assign<br>");
+        document.write(" -= :  x -= y :  x =  x-y<br>");
+        document.write(" += : x += y : x = x+y <br>");
+        document.write(" *= :  Multiplication<br>");
+        document.write(" /= :  Division<br>");
+        document.write(" %= :  Modulus(Remainder)<br>");
+        document.write(" **= :  Exponential<br>");
+
+
+        document.write ( "<br>a : " , a ,"&nbsp; b : ", b , "<br>");
+
+var c = 10 ;
+var d = 3; 
+  document.write(" a = b  : ", a = b,"  so  a : ", a , " b : " , b , " <br>");
+  document.write(" c += d  : ", c += d , " <br>");
+  document.write(" c -= d  : ", c -= d , " <br>");
+  document.write(" c =- d  : ", c =- d , " <br> <br>");
+
+
+  document.write("<b>3. Camparision Operators</b><br><br>");
+      document.write(" != ( values not equal ), !== (not equal value and not equal datatype) , > , < , >= , <= , == (equal to) , === (equal value and equal datatype <br><br>");
+
+      var x = 10 ; var y = 20;
+
+      document.write("x : " ,x , "&nbsp; y : " ,  y , "<br>");
+      document.write("x > y  : " , x > y, "<br>");
+      document.write("x < y  : " , x < y, "<br>");
+      document.write("x >= y  : " , x >= y, "<br>");
+      document.write("x <= y  : " , x <= y, "<br>");
+      document.write("x ==  y  : " , x  == y, "<br>");
+      document.write("x === y  : " , x === y, "<br>");
+
+      var c = 10 ; var d ="10"
+      document.write("c : " ,c , "&nbsp; d : " ,  d , "<br>");
+      document.write("c == d : " , c==d , "<br>");
+      document.write("c === d :" , c===d , "<br>");
+      document.write(null == undefined , "<br> ");
+      document.write(null === undefined , "<br> ");
+    
+
+
+      document.write("<br><b>4. Logical Operators</b><br><br>");
+      document.write( "&& - logiacl AND <br> || - Logical OR  <br> ! - Logical NOT")
+
+      var age = 20;
+      var age1 = 22;
+
+      if( age >= 18 && age <=21)
+      {
+        document.write("<br>Eligible");
+      }
+       if(age1 >=18 || age1 <=21)
+      {
+        document.write("<br>OR  ELEGIBLE <br>");
+      }
+       
+
+
+      document.write("<br><b> 5. Ternary(Conditional) Operators</b><br><br>");
+      document.write( " cond ? true value : false value ;")
+
+      var x = 19 ;
+      var y = (x >21 ? "Greater than 21 " : "Less than 21");
+      document.write("<br>Y is  : ", y);
+
+
+
+    </script>
+    
+</body>
+</html>

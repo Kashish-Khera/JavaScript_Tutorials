@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        document.write("Objects " + "<br>");
+
+        var a = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue",
+            favmovies : ["Dark", "You", "Wednesday"],
+            sum : function(x,y)
+            {
+                return x+ y;
+            },
+            fullname : function()
+            {
+                return this.firstName + " " + this.lastName;
+            },
+
+            living : {city : "Chandigarh", country : "India"}
+        };
+
+        document.write(a + "<br>");
+        // properties
+        document.write(a.firstName + "<br>");
+        document.write(a.favmovies + "<br>");
+        document.write(a['firstName'] + "<br>");
+        document.write(a.favmovies[1] + "<br>");
+        document.write(a.living.city + "<br>");
+        // methods
+        document.write(a.sum(2,3) + "<br>");
+        document.write(a.fullname() + "<br>");
+        console.log(a.fullname());
+        
+        // another way to declare objects 
+        
+        const person = {};
+        // properties of obiects
+        person.firstName = "John";
+        person.lastName = "Doe";
+        person.age = 50;
+        person.eyeColor = "blue";
+
+    </script>
+
+</body>
+
+</html>

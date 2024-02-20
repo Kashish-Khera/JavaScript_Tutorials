@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Navigation</title>
+    <style>
+        #test {
+            background: #ffff00;
+            width: 800px;
+            height: 200px;
+            padding: 10px 10px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="test">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam eos vel consequatur. Delectus
+            voluptas
+            dolorem id exercitationem, ad ipsam consectetur hic ullam provident! Adipisci exercitationem ipsam rerum
+            sunt
+            doloremque magni soluta, delectus maiores, sapiente quasi labore praesentium accusamus earum cum nam saepe
+            qui?
+            Accusamus provideSnt quo perferendis sint sed.</p>
+    </div>
+
+    <SCript>
+
+        // insertadjacent --create and append while insertBefore and appendChild--only append
+
+
+        // insertAdjacentElement : creatw HTM tag and append
+        // insertAdjacentHTML : creatw HTM tag and text and append
+        // insertAdjacentText : creatw text node and append
+
+
+        // insertAdjacent Positions/Index :
+
+        // -> beforbegin
+        // -> afterbegin
+        // -> beforeend
+        // -> afterend
+
+//   <!-- beforebegin -->
+//               <element>
+//   <!-- afterbegin -->
+//                   text
+//   <!-- beforeend -->
+//               </element>
+//   <!--afterend --
+
+
+
+    var a1 = document.createElement("h1");
+    var a2 = document.createElement("h1");
+    var a3 = document.createElement("h1");
+    var a4 = document.createElement("h1");
+    var b = document.createTextNode("Insert Adjacent Elemnt   -before Begin")
+    var c = document.createTextNode("Insert Adjacent Elemnt   -after Begin")
+    var d = document.createTextNode("Insert Adjacent Elemnt   -before End")
+    var e = document.createTextNode("Insert Adjacent Elemnt   - after End")
+
+    a1.appendChild(b);
+    a2.appendChild(c);
+    a3.appendChild(d);
+    a4.appendChild(e);
+    
+    var target = document.getElementById("test");
+
+    // target.insertAdjacentElement("beforebegin",a1);
+    // target.insertAdjacentElement("afterbegin",a2);
+    // target.insertAdjacentElement("beforeend",a3);
+    // target.insertAdjacentElement("afterend",a4);
+
+
+
+    var  newelem = "<h1>Hola!!</h1>";
+     target.insertAdjacentHTML("beforeend", newelem);
+
+    </SCript>
+</body>
+
+</html>

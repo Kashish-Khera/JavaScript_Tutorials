@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        document.write("<h1> Multi - D Arrays </h1>");
+
+        var a = [
+            ["Chase", 18, "Male", "Bcom"],
+            ["Lisa", 20, "Female", "Btech"],
+            ["Knight", 24, "Male", "BCA"],
+            ["Emily", 22, "Female", "B.A"]
+        ];
+
+
+        for(var i = 0;  i <a.length ; i++ )
+        {
+            document.write(a[i] + "<br>");
+        }
+
+
+        document.write("<br><br>");
+        
+        
+        for(var i = 0;  i < a.length ; i++ )
+        {
+            for(var j = 0; j <a.length ; j++)
+            {
+                document.write(a[i][j] + "<br>");
+            }
+
+            document.write("<br>");
+        }
+
+
+
+        document.write("<br>" + a[2][3]);
+        document.write("<br>" + a[1][2]);
+ 
+
+        
+
+
+
+    </script>
+
+</body>
+
+</html>

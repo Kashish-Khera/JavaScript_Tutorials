@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+    <title>Basic Layout</title>
+</head>
+<style>
+    #outer {
+        width: 550px;
+        height: 300px;
+        padding: 10px 10px;
+        margin: 0 auto;
+        background: lightsalmon;
+    }
+
+    #inner {
+        width: 500px;
+        height: 200px;
+        padding: 10px 10px;
+        margin: 0 auto;
+        background: mediumorchid;
+    }
+
+    #inner div {
+        display: inline-block;
+        background: #fff;
+        width: 95px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="outer">
+        <h2>Outer</h2>
+        <div id="inner">
+            <h2 id="child-head">Inner</h2>
+            <div>A</div>
+            <div>B</div>
+            <div id="child-C">C</div>
+            <div>D</div>
+            <div id="child-E">E</div>
+        </div>
+    </div>
+    <script>
+
+     // previousSibling/nextSibling - return first element - can be text/comment/ tag
+        // nextElementSibling & previousElementSibling  --return 1st tag
+
+var a = document.getElementById("child-C").previousSibling.innerHTML;
+  console.log("Prev sibling  " + a);
+  
+  var b = document.getElementById("child-C").previousElementSibling.innerHTML;
+  console.log("Prev Elemnt sibling   " + b);
+
+
+
+  var a = document.getElementById("child-C").nextSibling.innerHTML;
+  console.log("Next sibling  " + a);
+  
+  var b = document.getElementById("child-C").nextElementSibling.innerHTML;
+  console.log("Next Elemnt sibling  " + b);
+  document.getElementById("child-C").nextElementSibling.style.background= "orange";
+
+
+
+//   var b = document.getElementById("child-E").nextElementSibling.innerHTML;
+//   ERROR OCCUR AS THERE IS NO NEXT ELEEMNT AFTER e
+  console.log("Next Elemnt sibling of E : " + b);
+  document.getElementById("child-E").previousElementSibling.style.background= "yellow";
+  var b = document.getElementById("child-head").nextElementSibling.innerHTML;
+  console.log("Next Elemnt sibling of child head :   " + b);
+
+//   no prev sibling so giving error :-
+//   var b = document.getElementById("child-head").previousElementSibling.innerHTML;
+//   console.log("Next Elemnt sibling of child head :   " + b);
+
+    </script>
+</body>
+</html>

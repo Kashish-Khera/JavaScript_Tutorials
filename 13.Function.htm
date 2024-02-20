@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        document.write("<b>FUNCTIONS IN  JS</b> <br><br>");
+
+        //  Declaration syntax : 
+        // function functionname()
+        // {
+
+        // }
+
+        // to call the function  (Function Call) : 
+        // functionname();
+
+
+        function fun1() {
+            document.write("Hello from the function<br>");
+        }
+
+        function fun2() {
+            document.write("Hello from the function- 2<br>");
+        }
+
+
+        fun1();
+        fun2();
+
+        document.write("<br><b>Function with Parameter</b><br>")
+
+        function fun3(a, b) {
+            document.write("Function-3 called . Sum of ", a, " & ", b, " is  :  ", a + b, "<br>");
+
+        }
+
+        fun3(2, 3);
+        fun3(4, 6);
+
+        function fun4(fname, lname) {
+
+            // concat
+            document.write("Fullname is  " + fname + " " + lname + "<br>");
+            // comma
+            document.write("Fullname is  ", fname, " ", lname, "<br>");
+
+        }
+
+        fun4("Chase", "Black");
+
+        // var fn = prompt("Enter First name");
+        // var ln = prompt("Enter Last name");
+
+        // fun4(fn, ln);
+
+
+        document.write("<br><b>default para values</b><br>");
+        function fun5(fname = 100, lname = "ok") {
+
+            // concat
+            document.write("Fullname is  " + fname + " " + lname + "<br>");
+            // comma
+            document.write("Fullname is  ", fname, " ", lname, "<br>");
+
+        }
+
+        fun5();
+        fun5("qwerty", 1999);
+
+        document.write("<br><b>Function with Return Value</b><br>");
+
+        // Syntax : 
+        // function functionname(para1, para2)
+        // {
+        //     statemaents;
+        //     return value;
+        // }
+
+        // var a = functionname (para1, para2);
+
+
+        function fun6(maths , eng, sci )
+        {
+            var tt = (maths + eng + sci);
+            var per = tt / 300 * 100;
+            return per;
+        }
+
+        var fun6_value = fun6(55, 65, 75);
+        document.write("Percnetage is  " , fun6_value);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

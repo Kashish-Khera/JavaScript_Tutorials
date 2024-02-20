@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   
+    <h1 id="bold">DOMTutorial</h1></br>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste animi tenetur accusantium magnam, eum totam ea eveniet exercitationem sed temporibus consequatur excepturi. Accusamus nobis ducimus dolorum provident reprehenderit totam. Soluta deleniti, quis vitae nesciunt incidunt alias inventore suscipit dolore odio.</p>
+    <a href="#">Links</a>
+    <div class = "footer">this is footer</div>
+    <p class = "footer">this is footer2</p>
+    <div class = "footer">this is footer3</div>
+    <div class="ok">
+        <p id="what"  style="border : 2px solid red" onClick="xyz()">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, animi?
+            <a href="#">Links</a>
+            <ul class="qwerty" style="border : 2px solid red" onClick="xyz()" >
+                <li>One</li>
+                <li>TWO</li>
+            </ul>
+            <div class = "footer">this is footer</div>
+        </p>
+    </div>
+
+    
+    <script>
+
+        var a = document.getElementById("bold");
+        document.write(a + "<br>");
+         a = document.getElementById("what").innerText;
+        document.write( "iNNER TEXT <br>" , a + "<br>");
+        a = document.getElementById("what").innerHTML;
+        document.write("Inner html<br> "  + a + "<br>");
+        console.log(a + "<br>");
+
+
+        a = document.getElementById("what").getAttribute("style");
+        document.write("gET aTTRIBUT <br>" + a + "<br>");
+        a = document.getElementById("what").getAttribute("onClick");
+        document.write("gET aTTRIBUT <br>" + a + "<br>");
+
+
+        a = document.getElementById("what").getAttributeNode("style");
+        document.write("gET aTTRIBUT  Node <br>" + a + "<br>");
+        a = document.getElementById("what").getAttributeNode("style").value;
+        document.write("gET aTTRIBUT  Node <br>" + a + "<br>");
+console.log("gET aTTRIBUT  Node <br>" + a + "<br>");
+       
+
+
+        
+        var b = document.getElementsByClassName("qwerty").attributes;
+        document.write("aTTRIBUTES <br>" + b + "<br>");
+        console.log("aTTRIBUTES <br>" + b + "<br>");
+        b = document.getElementsByClassName("qwerty").attributes;
+        document.write("aTTRIBUTES <br>" + b + "<br>");
+
+      document.getElementsByClassName("qwerty").attributes[1] = "xyz";
+       document.getElementsByClassName("qwerty").removeAttribute("style");
+
+
+    </script>
+
+
+</body>
+</html>
